@@ -1,58 +1,38 @@
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from typing import List, Optional
-from datetime import datetime
-from scripts.config import Config, logger
-import psycopg2
-from psycopg2.extras import RealDictCursor
+from fastapi import Query
 
-app = FastAPI(title="Medical Warehouse Analytics API")
-
-# --- Pydantic Schemas (Requirement for Comment #1 & #4) ---
-class DetectionSummary(BaseModel):
-    detected_item: str
-    count: int
-    image_category: str
-
-class ChannelActivity(BaseModel):
+# 1. Pydantic Schema for Search
+class MessageSearchResponse(BaseModel):
+    message_id: int
     channel_id: str
-    message_count: int
-    last_update: datetime
+    message_text: str
+    detected_item: Optional[str]
 
-# --- Database Helper ---
-def get_db_connection():
-    try:
-        return psycopg2.connect(Config.get_db_connection_string(), cursor_factory=RealDictCursor)
-    except Exception as e:
-        logger.error(f"Database connection failed: {e}")
-        raise HTTPException(status_code=500, detail="Database connection error")
-
-# --- Analytical Endpoints ---
-
-@app.get("/analytics/top-products", response_model=List[DetectionSummary])
-def get_top_products():
-    """Returns top detected medical products from the Mart model."""
+# 2. Search Endpoint with Pagination (Requirement #1)
+@app.get("/analytics/search", response_model=List[MessageSearchResponse])
+def search_messages(
+    query: str = Query(..., min_length=3, description="Text to search for"),
+    limit: int = 10,
+    offset: int = 0
+):
     conn = get_db_connection()
     with conn.cursor() as cur:
-        # We query the MART table we created in Step 3
+        # Using ILIKE for case-insensitive search
         cur.execute("""
-            SELECT detected_item, COUNT(*) as count, image_category
-            FROM fct_image_detections
-            WHERE detected_item IS NOT NULL
-            GROUP BY detected_item, image_category
-            ORDER BY count DESC
-            LIMIT 10
-        """)
+            SELECT message_id, channel_id, message_text, detected_item 
+            FROM fct_image_detections 
+            WHERE message_text ILIKE %s
+            LIMIT %s OFFSET %s
+        """, (f'%{query}%', limit, offset))
         return cur.fetchall()
 
-@app.get("/analytics/channel-activity", response_model=List[ChannelActivity])
-def get_channel_activity():
-    """Returns message volume per channel."""
+# 3. Visual Content Report (Requirement #1)
+@app.get("/analytics/visual-report")
+def get_visual_report():
     conn = get_db_connection()
     with conn.cursor() as cur:
         cur.execute("""
-            SELECT channel_id, COUNT(*) as message_count, MAX(created_at) as last_update
+            SELECT image_category, COUNT(*) as count, AVG(confidence) as avg_confidence
             FROM fct_image_detections
-            GROUP BY channel_id
+            GROUP BY image_category
         """)
         return cur.fetchall()
