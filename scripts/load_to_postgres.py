@@ -1,36 +1,26 @@
-import os
-import json
 import pandas as pd
 from sqlalchemy import create_engine
+from config import Config, logger  # Import your new centralized config
 
-# Database Connection
-engine = create_engine('postgresql://postgres:password123@localhost:5432/medical_db')
+def load_data_to_postgres(df, table_name):
+    """
+    Loads a dataframe to postgres with error handling and logging.
+    """
+    if df.empty:
+        logger.warning(f"Dataframe for {table_name} is empty. Skipping load.")
+        return
 
-def load_data():
-    # Adjust this path if your JSONs are stored elsewhere
-    base_path = "data" 
-    all_data = []
-    
-    print("Searching for JSON files...")
-    for root, dirs, files in os.walk(base_path):
-        for file in files:
-            if file.endswith(".json"):
-                file_path = os.path.join(root, file)
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = json.load(f)
-                    # Handle both single objects and lists of objects
-                    if isinstance(content, list):
-                        all_data.extend(content)
-                    else:
-                        all_data.append(content)
-    
-    if all_data:
-        df = pd.DataFrame(all_data)
-        # We use 'replace' to ensure a fresh start
-        df.to_sql('telegram_messages', engine, schema='raw', if_exists='replace', index=False)
-        print(f"✅ Success! Loaded {len(df)} rows into raw.telegram_messages")
-    else:
-        print("❌ Error: No JSON data found in the 'data' folder.")
-
-if __name__ == "__main__":
-    load_data()
+    try:
+        # Use the connection string from our Config class
+        engine = create_engine(Config.get_db_connection_string())
+        
+        logger.info(f"Attempting to write {len(df)} rows to table '{table_name}'...")
+        
+        df.to_sql(table_name, engine, if_exists='append', index=False)
+        
+        logger.info(f"Successfully loaded data into {table_name}.")
+        
+    except Exception as e:
+        # Structured error handling (Comment #4 requirement)
+        logger.error(f"Critical error during database write to {table_name}: {e}")
+        # In a real pipeline, you might want to re-raise or send an alert here
