@@ -1,5 +1,5 @@
 with raw_messages as (
-    select * from "medical_db"."raw"."telegram_messages"
+    select * from "medical_db"."public"."telegram_messages"
 )
 
 select
