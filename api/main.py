@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List, Optional
 from datetime import datetime
-from config import Config, logger
+from scripts.config import Config, logger
 import psycopg2
 from psycopg2.extras import RealDictCursor
 
