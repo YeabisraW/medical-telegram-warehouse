@@ -17,16 +17,12 @@ Insight: Real-time sentiment tracking (current average: 0.68) for pharmaceutical
 # 1. Clone the repository
 git clone https://github.com/YeabisraW/medical-telegram-warehouse.git
 cd medical-telegram-warehouse
-
 # 2. Install dependencies
 pip install -r requirements.txt
-
 # 3. Start the Analytical API
 uvicorn api.main:app --reload
-
 # 4. Launch the Dashboard
 streamlit run dashboard.py
-
 # Project Structure
 ├── .github/workflows/  # CI/CD (GitHub Actions)
 ├── api/                # FastAPI Analytical Layer
@@ -35,7 +31,7 @@ streamlit run dashboard.py
 ├── scripts/            # Data Scraping (Telethon)
 ├── dashboard.py        # Streamlit Frontend
 └── requirements.txt    # Dependency Management
-# 🛠️ Engineering Excellence
+# Engineering Excellence
 Code Quality: Refactored using Type Hints and modular utility functions for maintainability.
 Risk Mitigation: The API features a resilient failover mode (Mock Provider) to ensure dashboard availability during database maintenance.
 Transparency: Integrated Dagster for clear asset lineage, providing auditors with a transparent view of data provenance.
