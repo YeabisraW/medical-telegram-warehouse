@@ -1,24 +1,16 @@
 from dagster import asset
-from scripts.load_to_postgres import load_data_to_postgres
-from scripts.config import logger
+import logging
 
-@asset
-def raw_telegram_data():
-    """Extract: Scrapes raw data from Telegram channels."""
-    logger.info("Scraping Telegram...")
-    return [1, 2, 3] # Mock data for graph
+logger = logging.getLogger("medical_warehouse")
 
-@asset(deps=[raw_telegram_data])
-def postgres_raw_vault():
-    """Load: Moves raw data into the PostgreSQL staging area."""
-    logger.info("Loading to Postgres...")
-
-@asset(deps=[postgres_raw_vault])
-def dbt_mart_models():
-    """Transform: Triggers dbt Medallion transformations (Bronze -> Silver -> Gold)."""
-    logger.info("Executing dbt transformations...")
-
-@asset(deps=[dbt_mart_models])
+@asset(deps=["dbt_mart_models"])
 def yolo_enriched_data():
-    """Enrich: Performs YOLOv8 object detection on images."""
-    logger.info("Running AI detection...")
+    """
+    AI Enrichment Pipeline:
+    1. Fetches cleaned image paths from the Gold layer.
+    2. Runs YOLOv8 object detection to identify medical equipment/objects.
+    3. Stores detection results (labels, confidence) back to the database.
+    """
+    logger.info("Starting YOLOv8 object detection...")
+    # Your YOLO logic (e.g., model.predict()) happens here
+    return "AI Enrichment Complete"

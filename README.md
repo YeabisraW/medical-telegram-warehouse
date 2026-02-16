@@ -2,6 +2,11 @@
 
 This project is a complete end-to-end Data Engineering and AI system. It automates the collection of medical data from Telegram, transforms it into a structured warehouse, enriches it with Computer Vision (YOLOv8), and serves the final results through a REST API.
 ---
+## 🚀 Quick Start
+To run the analytical engine:
+1. `pip install -r requirements.txt`
+2. `dbt build` (Runs all models and data quality tests)
+3. `uvicorn api.main:app --reload`
 ## 🏗️ System Architecture
 1. **Extraction**: Custom Python scrapers for Telegram messages and images using Telethon.
 2. **Storage**: Raw data stored in a **PostgreSQL 16** database (Dockerized).
