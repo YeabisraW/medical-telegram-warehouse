@@ -754,3 +754,462 @@ KeyboardInterrupt
 [0m16:48:15.003910 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BFE82C210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BFE82D8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000014BFD7D3590>]}
 [0m16:48:15.005416 [debug] [MainThread]: Flushing usage events
 [0m16:48:19.538002 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:47:32.413131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F19A492D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F19B4D2B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F19B4D3290>]}
+
+
+============================== 13:47:32.419570 | e8749148-9308-4dc2-9788-25692db51e8e ==============================
+[0m13:47:32.419570 [info ] [MainThread]: Running with dbt=1.11.2
+[0m13:47:32.419570 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\sciec\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt docs generate', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\sciec\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m13:47:32.999713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e8749148-9308-4dc2-9788-25692db51e8e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F19A22F450>]}
+[0m13:47:33.057878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e8749148-9308-4dc2-9788-25692db51e8e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F196CA0A10>]}
+[0m13:47:33.059929 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m13:47:33.353396 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m13:47:36.310243 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m13:47:36.312270 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\fct_image_detections.sql
+[0m13:47:36.481925 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.medical_warehouse.fct_image_detections' (models\marts\fct_image_detections.sql) depends on a node named 'stg_yolo_detections' which was not found
+[0m13:47:36.481925 [debug] [MainThread]: Command `dbt docs generate` failed at 13:47:36.481925 after 4.18 seconds
+[0m13:47:36.481925 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F19A487F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F19BBABB50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F19A489790>]}
+[0m13:47:36.481925 [debug] [MainThread]: Flushing usage events
+[0m13:47:41.018733 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:47:43.626685 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE95F92990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE950C9690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE96FD3290>]}
+
+
+============================== 13:47:43.630224 | 50069a91-1097-4868-b7dd-35a8cbbad111 ==============================
+[0m13:47:43.630224 [info ] [MainThread]: Running with dbt=1.11.2
+[0m13:47:43.630224 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\sciec\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt docs serve', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\sciec\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m13:47:43.789297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '50069a91-1097-4868-b7dd-35a8cbbad111', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE971E50D0>]}
+[0m13:47:43.851054 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '50069a91-1097-4868-b7dd-35a8cbbad111', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE927A5D90>]}
+[0m13:50:57.408812 [error] [MainThread]: Encountered an error:
+
+[0m13:50:57.458061 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\main.py", line 307, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m13:50:57.459620 [debug] [MainThread]: Command `dbt docs serve` failed at 13:50:57.459620 after 193.92 seconds
+[0m13:50:57.459620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE950C9790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE95FCEF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002AE95F87FD0>]}
+[0m13:50:57.460617 [debug] [MainThread]: Flushing usage events
+[0m13:50:59.954728 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:51:07.130505 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225C08B3B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225C08FE6D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225C08FCE90>]}
+
+
+============================== 13:51:07.134016 | bc49f071-3c78-4df6-8bed-53ff951c478a ==============================
+[0m13:51:07.134016 [info ] [MainThread]: Running with dbt=1.11.2
+[0m13:51:07.135692 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\sciec\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt docs generate', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\sciec\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m13:51:07.283501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bc49f071-3c78-4df6-8bed-53ff951c478a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225C1B15A10>]}
+[0m13:51:07.338438 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bc49f071-3c78-4df6-8bed-53ff951c478a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225BD0D5A10>]}
+[0m13:51:07.339506 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m13:51:07.477545 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m13:51:07.597594 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m13:51:07.597594 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\staging\stg_yolo_detections.sql
+[0m13:51:07.598596 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\fct_image_detections.sql
+[0m13:51:07.762472 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.medical_warehouse.stg_yolo_detections' (models\staging\stg_yolo_detections.sql) depends on a source named 'public.raw_yolo_detections' which was not found
+[0m13:51:07.763092 [debug] [MainThread]: Command `dbt docs generate` failed at 13:51:07.763092 after 0.71 seconds
+[0m13:51:07.764094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225C1F08B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225C08B7C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000225C1D968D0>]}
+[0m13:51:07.764094 [debug] [MainThread]: Flushing usage events
+[0m13:51:10.320350 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:51:12.374115 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D9340A290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D9340A750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D93409E90>]}
+
+
+============================== 13:51:12.377627 | aa0e3797-8c96-47f3-ad6a-72fa9ca646a4 ==============================
+[0m13:51:12.377627 [info ] [MainThread]: Running with dbt=1.11.2
+[0m13:51:12.378627 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\sciec\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt docs serve', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\sciec\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m13:51:12.540563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'aa0e3797-8c96-47f3-ad6a-72fa9ca646a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D9343F750>]}
+[0m13:51:12.596450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'aa0e3797-8c96-47f3-ad6a-72fa9ca646a4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D8FC1C890>]}
+[0m13:52:22.306076 [error] [MainThread]: Encountered an error:
+
+[0m13:52:22.357967 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\main.py", line 307, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 238, in serve_forever
+    self._handle_request_noblock()
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 317, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 348, in process_request
+    self.finish_request(request, client_address)
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 671, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 755, in __init__
+    self.handle()
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 404, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 706, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m13:52:22.358966 [debug] [MainThread]: Command `dbt docs serve` failed at 13:52:22.358966 after 70.07 seconds
+[0m13:52:22.358966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D8C684790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D94812290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024D93409790>]}
+[0m13:52:22.360616 [debug] [MainThread]: Flushing usage events
+[0m13:52:40.434651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199110B2E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019910E4B710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199120F3290>]}
+
+
+============================== 13:52:40.437651 | dc78c28c-e70a-4184-acfb-b1e3e0e8b3f2 ==============================
+[0m13:52:40.437651 [info ] [MainThread]: Running with dbt=1.11.2
+[0m13:52:40.439211 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\sciec\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt docs generate', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\sciec\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m13:52:40.597713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dc78c28c-e70a-4184-acfb-b1e3e0e8b3f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019912305C90>]}
+[0m13:52:40.655011 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dc78c28c-e70a-4184-acfb-b1e3e0e8b3f2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001990D8C22D0>]}
+[0m13:52:40.656669 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m13:52:40.801649 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m13:52:40.891935 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m13:52:40.892936 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\staging\stg_yolo_detections.sql
+[0m13:52:40.892936 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\fct_image_detections.sql
+[0m13:52:41.058336 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.medical_warehouse.stg_yolo_detections' (models\staging\stg_yolo_detections.sql) depends on a source named 'public.raw_yolo_detections' which was not found
+[0m13:52:41.059946 [debug] [MainThread]: Command `dbt docs generate` failed at 13:52:41.059946 after 0.75 seconds
+[0m13:52:41.059946 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199120F8E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199120FAD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000199122FA010>]}
+[0m13:52:41.061465 [debug] [MainThread]: Flushing usage events
+[0m13:52:42.273773 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:54:10.579821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF230B7A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF230B5890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF230B6910>]}
+
+
+============================== 13:54:10.582802 | 7086f4dd-d999-4320-8db6-8a69e48b993b ==============================
+[0m13:54:10.582802 [info ] [MainThread]: Running with dbt=1.11.2
+[0m13:54:10.583346 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\sciec\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt docs generate', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\sciec\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m13:54:10.735851 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7086f4dd-d999-4320-8db6-8a69e48b993b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF2213A3D0>]}
+[0m13:54:10.789266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7086f4dd-d999-4320-8db6-8a69e48b993b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF1F8C6550>]}
+[0m13:54:10.790382 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m13:54:10.929799 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m13:54:11.039380 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 1 files changed.
+[0m13:54:11.039380 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\fct_image_detections.sql
+[0m13:54:11.040386 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\staging\stg_yolo_detections.sql
+[0m13:54:11.040386 [debug] [MainThread]: Partial parsing: updated file: medical_warehouse://models\staging\sources.yml
+[0m13:54:11.334529 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.medical_warehouse.stg_telegram_messages' (models\staging\stg_telegram_messages.sql) depends on a source named 'raw_data.telegram_messages' which was not found
+[0m13:54:11.336063 [debug] [MainThread]: Command `dbt docs generate` failed at 13:54:11.336063 after 0.83 seconds
+[0m13:54:11.336063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF2497FB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF230B3DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BF248A90D0>]}
+[0m13:54:11.336063 [debug] [MainThread]: Flushing usage events
+[0m13:54:13.818192 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:54:15.763875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002171B0E1710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002171C1235D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002171B0D8190>]}
+
+
+============================== 13:54:15.766881 | abb96ee1-4d7c-42d1-bdff-1384d6c4e6ab ==============================
+[0m13:54:15.766881 [info ] [MainThread]: Running with dbt=1.11.2
+[0m13:54:15.767880 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\sciec\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt docs serve', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\sciec\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m13:54:15.913892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'abb96ee1-4d7c-42d1-bdff-1384d6c4e6ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002171C2D7450>]}
+[0m13:54:15.967391 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'abb96ee1-4d7c-42d1-bdff-1384d6c4e6ab', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000217178F6750>]}
+[0m13:56:05.184983 [error] [MainThread]: Encountered an error:
+
+[0m13:56:05.191209 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\main.py", line 307, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m13:56:05.194127 [debug] [MainThread]: Command `dbt docs serve` failed at 13:56:05.194127 after 109.50 seconds
+[0m13:56:05.195122 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002171B0D7CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002171B0DAF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002171B0DBF10>]}
+[0m13:56:05.196121 [debug] [MainThread]: Flushing usage events
+[0m13:56:09.730035 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:56:21.691312 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291D84911D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291D84DFD50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291D84CFA10>]}
+
+
+============================== 13:56:21.698645 | 68469e94-05f9-40e7-b871-3f169c55ea48 ==============================
+[0m13:56:21.698645 [info ] [MainThread]: Running with dbt=1.11.2
+[0m13:56:21.700158 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\sciec\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt docs generate', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\sciec\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m13:56:21.889602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '68469e94-05f9-40e7-b871-3f169c55ea48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291D969B150>]}
+[0m13:56:21.942511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '68469e94-05f9-40e7-b871-3f169c55ea48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291D4CB4E50>]}
+[0m13:56:21.943563 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m13:56:22.081169 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m13:56:22.193379 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 1 files changed.
+[0m13:56:22.194379 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\staging\stg_yolo_detections.sql
+[0m13:56:22.194379 [debug] [MainThread]: Partial parsing: added file: medical_warehouse://models\marts\fct_image_detections.sql
+[0m13:56:22.195366 [debug] [MainThread]: Partial parsing: updated file: medical_warehouse://models\staging\sources.yml
+[0m13:56:22.560489 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '68469e94-05f9-40e7-b871-3f169c55ea48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291D84DEED0>]}
+[0m13:56:22.583739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '68469e94-05f9-40e7-b871-3f169c55ea48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291D9B95DD0>]}
+[0m13:56:22.583739 [info ] [MainThread]: Found 4 models, 2 sources, 464 macros
+[0m13:56:22.584740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '68469e94-05f9-40e7-b871-3f169c55ea48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291D9BE0B10>]}
+[0m13:56:22.585729 [info ] [MainThread]: 
+[0m13:56:22.586735 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m13:56:22.586735 [info ] [MainThread]: 
+[0m13:56:22.587735 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m13:56:22.590735 [debug] [ThreadPool]: Acquiring new postgres connection 'list_medical_db_analytics'
+[0m13:56:27.426420 [debug] [ThreadPool]: Using postgres connection "list_medical_db_analytics"
+[0m13:56:27.426420 [debug] [ThreadPool]: On list_medical_db_analytics: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "list_medical_db_analytics"} */
+select
+      'medical_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'medical_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'medical_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m13:56:27.427422 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:56:27.476186 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.049 seconds
+[0m13:56:27.477170 [debug] [ThreadPool]: On list_medical_db_analytics: ROLLBACK
+[0m13:56:27.478078 [debug] [ThreadPool]: On list_medical_db_analytics: Close
+[0m13:56:27.481983 [debug] [MainThread]: Using postgres connection "master"
+[0m13:56:27.483036 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m13:56:27.483036 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:56:27.498501 [debug] [MainThread]: SQL status: SELECT 1 in 0.015 seconds
+[0m13:56:27.499719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '68469e94-05f9-40e7-b871-3f169c55ea48', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291D9BEE710>]}
+[0m13:56:27.499719 [debug] [MainThread]: On master: ROLLBACK
+[0m13:56:27.500697 [debug] [MainThread]: On master: Close
+[0m13:56:27.506094 [debug] [Thread-1 (]: Began running node model.medical_warehouse.stg_telegram_messages
+[0m13:56:27.506094 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.medical_warehouse.stg_telegram_messages'
+[0m13:56:27.507093 [debug] [Thread-1 (]: Began compiling node model.medical_warehouse.stg_telegram_messages
+[0m13:56:27.512133 [debug] [Thread-1 (]: Writing injected SQL for node "model.medical_warehouse.stg_telegram_messages"
+[0m13:56:27.512674 [debug] [Thread-1 (]: Began executing node model.medical_warehouse.stg_telegram_messages
+[0m13:56:27.513667 [debug] [Thread-1 (]: Finished running node model.medical_warehouse.stg_telegram_messages
+[0m13:56:27.513667 [debug] [Thread-1 (]: Began running node model.medical_warehouse.stg_yolo_detections
+[0m13:56:27.514667 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.medical_warehouse.stg_telegram_messages, now model.medical_warehouse.stg_yolo_detections)
+[0m13:56:27.514667 [debug] [Thread-1 (]: Began compiling node model.medical_warehouse.stg_yolo_detections
+[0m13:56:27.516686 [debug] [Thread-1 (]: Writing injected SQL for node "model.medical_warehouse.stg_yolo_detections"
+[0m13:56:27.517688 [debug] [Thread-1 (]: Began executing node model.medical_warehouse.stg_yolo_detections
+[0m13:56:27.517688 [debug] [Thread-1 (]: Finished running node model.medical_warehouse.stg_yolo_detections
+[0m13:56:27.518666 [debug] [Thread-1 (]: Began running node model.medical_warehouse.fact_medical_posts
+[0m13:56:27.518666 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.medical_warehouse.stg_yolo_detections, now model.medical_warehouse.fact_medical_posts)
+[0m13:56:27.519668 [debug] [Thread-1 (]: Began compiling node model.medical_warehouse.fact_medical_posts
+[0m13:56:27.521174 [debug] [Thread-1 (]: Writing injected SQL for node "model.medical_warehouse.fact_medical_posts"
+[0m13:56:27.521174 [debug] [Thread-1 (]: Began executing node model.medical_warehouse.fact_medical_posts
+[0m13:56:27.522899 [debug] [Thread-1 (]: Finished running node model.medical_warehouse.fact_medical_posts
+[0m13:56:27.523542 [debug] [Thread-1 (]: Began running node model.medical_warehouse.fct_image_detections
+[0m13:56:27.523904 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.medical_warehouse.fact_medical_posts, now model.medical_warehouse.fct_image_detections)
+[0m13:56:27.523904 [debug] [Thread-1 (]: Began compiling node model.medical_warehouse.fct_image_detections
+[0m13:56:27.526905 [debug] [Thread-1 (]: Writing injected SQL for node "model.medical_warehouse.fct_image_detections"
+[0m13:56:27.526905 [debug] [Thread-1 (]: Began executing node model.medical_warehouse.fct_image_detections
+[0m13:56:27.527905 [debug] [Thread-1 (]: Finished running node model.medical_warehouse.fct_image_detections
+[0m13:56:27.528903 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m13:56:27.528903 [debug] [MainThread]: Connection 'list_medical_db_analytics' was properly closed.
+[0m13:56:27.529904 [debug] [MainThread]: Connection 'model.medical_warehouse.fct_image_detections' was properly closed.
+[0m13:56:27.529904 [debug] [MainThread]: Command end result
+[0m13:56:27.571664 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\sciec\medical-telegram-warehouse\medical_warehouse\target\manifest.json
+[0m13:56:27.586706 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\sciec\medical-telegram-warehouse\medical_warehouse\target\semantic_manifest.json
+[0m13:56:27.592058 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\sciec\medical-telegram-warehouse\medical_warehouse\target\run_results.json
+[0m13:56:27.593984 [debug] [MainThread]: Acquiring new postgres connection 'generate_catalog'
+[0m13:56:27.593984 [info ] [MainThread]: Building catalog
+[0m13:56:27.600395 [debug] [ThreadPool]: Acquiring new postgres connection 'medical_db.information_schema'
+[0m13:56:27.605410 [debug] [ThreadPool]: Using postgres connection "medical_db.information_schema"
+[0m13:56:27.606294 [debug] [ThreadPool]: On medical_db.information_schema: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "medical_warehouse", "target_name": "dev", "connection_name": "medical_db.information_schema"} */
+
+    
+    
+
+    select
+        'medical_db' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            when 'm' then 'MATERIALIZED VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+    where ((upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('telegram_messages')) or (upper(sch.nspname) = upper('analytics') and
+           upper(tbl.relname) = upper('stg_yolo_detections')) or (upper(sch.nspname) = upper('analytics') and
+           upper(tbl.relname) = upper('stg_telegram_messages')) or (upper(sch.nspname) = upper('public') and
+           upper(tbl.relname) = upper('raw_yolo_detections')) or (upper(sch.nspname) = upper('analytics') and
+           upper(tbl.relname) = upper('fact_medical_posts')) or (upper(sch.nspname) = upper('analytics') and
+           upper(tbl.relname) = upper('fct_image_detections')))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence in ('p', 'u') -- [p]ermanent table or [u]nlogged table. Exclude [t]emporary tables
+      and tbl.relkind in ('r', 'v', 'f', 'p', 'm') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table, [m]aterialized view. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+[0m13:56:27.607292 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m13:56:27.633357 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.026 seconds
+[0m13:56:27.635364 [debug] [ThreadPool]: On medical_db.information_schema: ROLLBACK
+[0m13:56:27.636362 [debug] [ThreadPool]: On medical_db.information_schema: Close
+[0m13:56:27.644872 [debug] [MainThread]: Wrote artifact CatalogArtifact to C:\Users\sciec\medical-telegram-warehouse\medical_warehouse\target\catalog.json
+[0m13:56:27.659427 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\sciec\medical-telegram-warehouse\medical_warehouse\target\manifest.json
+[0m13:56:27.660948 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\sciec\medical-telegram-warehouse\medical_warehouse\target\semantic_manifest.json
+[0m13:56:27.660948 [info ] [MainThread]: Catalog written to C:\Users\sciec\medical-telegram-warehouse\medical_warehouse\target\catalog.json
+[0m13:56:27.662954 [debug] [MainThread]: Command `dbt docs generate` succeeded at 13:56:27.661953 after 6.06 seconds
+[0m13:56:27.662954 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m13:56:27.662954 [debug] [MainThread]: Connection 'medical_db.information_schema' was properly closed.
+[0m13:56:27.662954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291D84917D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291D8493F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291D84923D0>]}
+[0m13:56:27.663953 [debug] [MainThread]: Flushing usage events
+[0m13:56:29.081026 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:56:59.621130 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA944C3C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA954C3BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA943A5010>]}
+
+
+============================== 13:56:59.624128 | bb8ab7c5-93ec-483e-a9bb-99ce70c7fcaa ==============================
+[0m13:56:59.624128 [info ] [MainThread]: Running with dbt=1.11.2
+[0m13:56:59.625127 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\sciec\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt docs serve', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\sciec\\medical-telegram-warehouse\\medical_warehouse\\logs'}
+[0m13:56:59.780663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bb8ab7c5-93ec-483e-a9bb-99ce70c7fcaa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA935244D0>]}
+[0m13:56:59.835192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bb8ab7c5-93ec-483e-a9bb-99ce70c7fcaa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA90CA2350>]}
+[0m14:00:20.928518 [error] [MainThread]: Encountered an error:
+
+[0m14:00:20.934088 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\cli\main.py", line 307, in docs_serve
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 233, in serve_forever
+    ready = selector.select(poll_interval)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\selectors.py", line 323, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sciec\AppData\Local\Programs\Python\Python311\Lib\selectors.py", line 314, in _select
+    r, w, x = select.select(r, w, w, timeout)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+[0m14:00:20.936985 [debug] [MainThread]: Command `dbt docs serve` failed at 14:00:20.936985 after 201.40 seconds
+[0m14:00:20.938091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA954CAD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA954C8290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FA94477B90>]}
+[0m14:00:20.938091 [debug] [MainThread]: Flushing usage events
+[0m14:00:26.549323 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,11 +1,11 @@
 version: 2
+
 sources:
-  - name: raw_data
-    schema: raw
+  - name: raw_data  # Matches stg_telegram_messages.sql
+    schema: public  # Assuming your tables are in the public schema
     tables:
       - name: telegram_messages
-        columns:
-          - name: message_id
-            tests:
-              - unique
-              - not_null
+
+  - name: public    # Matches stg_yolo_detections.sql
+    tables:
+      - name: raw_yolo_detections

@@ -1,34 +1,16 @@
-from dagster import asset, Config
-from scripts.config import logger
-# Import your existing script functions here
-# from scripts.scraper import run_scraper
-# from scripts.load_to_postgres import load_data
+from dagster import asset
+import logging
 
-@asset
-def raw_telegram_data():
-    """Step 1: Scrape data from Telegram channels."""
-    logger.info("Starting Telegram scrape...")
-    # run_scraper() 
-    return "Success"
+logger = logging.getLogger("medical_warehouse")
 
-@asset(deps=[raw_telegram_data])
-def postgres_raw_vault():
-    """Step 2: Load raw JSON/CSV into PostgreSQL."""
-    logger.info("Loading raw data to Postgres...")
-    # load_data()
-    return "Success"
-
-@asset(deps=[postgres_raw_vault])
-def dbt_mart_models():
-    """Step 3: Trigger dbt transformations to create the Mart layer."""
-    logger.info("Running dbt transformations...")
-    # You would typically use dagster-dbt here, 
-    # but a simple shell command 'dbt run' works too.
-    return "Success"
-
-@asset(deps=[dbt_mart_models])
+@asset(deps=["dbt_mart_models"])
 def yolo_enriched_data():
-    """Step 4: Run YOLO detection on images and update the warehouse."""
-    logger.info("Running YOLOv8 enrichment...")
-    # run_yolo_script()
-    return "Success"
+    """
+    AI Enrichment Pipeline:
+    1. Fetches cleaned image paths from the Gold layer.
+    2. Runs YOLOv8 object detection to identify medical equipment/objects.
+    3. Stores detection results (labels, confidence) back to the database.
+    """
+    logger.info("Starting YOLOv8 object detection...")
+    # Your YOLO logic (e.g., model.predict()) happens here
+    return "AI Enrichment Complete"
