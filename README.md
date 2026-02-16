@@ -7,6 +7,9 @@ To run the analytical engine:
 1. `pip install -r requirements.txt`
 2. `dbt build` (Runs all models and data quality tests)
 3. `uvicorn api.main:app --reload`
+4. **API:** Run `uvicorn api.main:app --reload` to start the analytical backend.
+5. **Dashboard:** Run `streamlit run dashboard.py` to view data visualizations.
+6. **Orchestration:** Run `dagster dev -f orchestration/assets.py` to view the pipeline lineage.
 ## 🏗️ System Architecture
 1. **Extraction**: Custom Python scrapers for Telegram messages and images using Telethon.
 2. **Storage**: Raw data stored in a **PostgreSQL 16** database (Dockerized).
